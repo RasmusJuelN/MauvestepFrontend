@@ -1,0 +1,56 @@
+@import "tailwindcss";
+
+:root {
+  --color-primary-purple: #b2a0dd;
+  --color-secondary-purple: #8368ff;
+  --color-accent-purple: #9573df;
+  --color-dark-purple: #2e1f5c;
+
+  --color-indigo-100: #e0e7ff;
+  --color-indigo-200: #c7d2fe;
+  --color-indigo-300: #a5b4fc;
+  --color-indigo-400: #818cf8;
+  --color-indigo-500: #6366f1;
+  --color-indigo-600: #4f46e5;
+  --color-indigo-700: #4338ca;
+  --color-indigo-800: #3730a3;
+  --color-indigo-900: #312e81;
+  --color-indigo-950: #1e1b4b;
+
+  --color-white: #ffffff;
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme {
+  --color-primary-purple: var(--color-primary-purple);
+  --color-secondary-purple: var(--foreground);
+  --color-accent-purple: var(--color-accent-purple);
+  --color-dark-purple: var(--color-dark-purple);
+
+  --color-indigo-100: var(--color-indigo-100);
+  --color-indigo-200: var(--color-indigo-200);
+  --color-indigo-300: var(--color-indigo-300);
+  --color-indigo-400: var(--color-indigo-400);
+  --color-indigo-500: var(--color-indigo-500);
+  --color-indigo-600: var(--color-indigo-600);
+  --color-indigo-700: var(--color-indigo-700);
+  --color-indigo-800: var(--color-indigo-800);
+  --color-indigo-900: var(--color-indigo-900);
+  --color-indigo-950: var(--color-indigo-950);
+
+  --color-primary-pink: var(--color-primary-pink);
+  --color-secondary-pink: var(--foreground);
+
+  --color-primary-gold: var(--color-primary-gold);
+  --color-secondary-gold: var(--foreground);
+  --color-accent-gold: var(--color-accent-gold);
+
+  --color-white: var(--color-white);
+
+  --breakpoint-lg-custom: 1050px;
+}
+
+
+
+
