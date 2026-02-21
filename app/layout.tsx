@@ -21,7 +21,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       </head>
       <body>
         <AuthProvider>
-          <div className="min-h-screen bg-gradient-to-b from-[#0c091b] to-[#150f27] text-indigo-200 justify-center items-center flex flex-col">
+          <div className="min-h-screen bg-gradient-to-b from-[#0c091b] to-[#150f27] text-indigo-200 justify-center items-center flex flex-col z-auto">
             {children}
           </div>
         </AuthProvider>

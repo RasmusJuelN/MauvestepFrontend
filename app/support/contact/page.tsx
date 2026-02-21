@@ -6,6 +6,7 @@ import { SupportTicketService } from '@/lib/services/supportTicketService'
 import { getErrorMessage } from '@/lib/utilities/errorhandling/errorHandler';import PageContainer from "@/components/layout/PageContainer"
 import Breadcrumb from "@/components/shared/Breadcrumb"
 import Button from '@/components/shared/Button'
+import PageHeader from '@/components/shared/PageHeader';
 
 
 export default function ContactPage() {
@@ -58,9 +59,7 @@ export default function ContactPage() {
           { label: 'Contact' }
         ]} />
         
-        <div className="flex items-center justify-center gap-3 mb-6">
-          <h2 className="text-3xl text-indigo-500 font-semibold text-center">Support ticket</h2>
-        </div>
+        <PageHeader title="Support Ticket" />
         
         <p className="text-center text-indigo-300 mb-8">
           Need help? Send us a message and we&apos;ll get back to you as soon as possible.

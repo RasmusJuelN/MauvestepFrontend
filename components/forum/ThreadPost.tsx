@@ -93,11 +93,11 @@ export default function ThreadPost({
   }
 
   return (
-    <div className="border-b border-indigo-700/30 pb-4 last:border-b-0 ">
+    <div className="border-b border-indigo-700/30 p-2 pb-4 last:border-b-0 ">
 
       <div className="flex gap-3">
 
-        <div className="flex flex-col items-center pt-1 flex-shrink-0">
+        <div className="flex flex-col items-center pt-1 flex-shrink-0 space-y-1">
           {authorProfilePic ? (
             <Image
               src={authorProfilePic}

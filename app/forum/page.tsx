@@ -6,6 +6,7 @@ import CategoryCard from '../../components/forum/CategoryCard'
 import CreateCategoryModal from '@/components/forum/CreateCategoryModal'
 import Link from 'next/link'
 import Breadcrumb from '@/components/shared/Breadcrumb'
+import PageHeader from '@/components/shared/PageHeader'
 import { ForumCategoryService } from '@/lib/services/forumCategoryService'
 import { ForumCategory } from '@/lib/types'
 import { useAuth } from '@/lib/hooks/authContext'
@@ -41,15 +42,15 @@ export default function ForumIndex() {
   return (
     <PageContainer>
       <div className="space-y-4 ">
-        <Breadcrumb items={[ //Breadcrumb for easy navigation between forum, categories and their threads
+        <Breadcrumb items={[
         { label: 'Forum', href: '/forum' },
         { label: 'Categories'}
       ]} />
         
-        <div className="relative">
-          <h2 className="text-3xl text-indigo-500 font-semibold text-center">Categories</h2>
+        
+        <div className="relative mb-4">
+          <PageHeader title="Categories" />
           {user?.role === 'Admin' && (
-            // authorizing user so only admin kan see create catergiry button
             <Button
               onClick={() => setShowCreateCategoryModal(true)}
               className="absolute right-0 top-0 flex items-center gap-2"

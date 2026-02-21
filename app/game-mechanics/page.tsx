@@ -1,5 +1,6 @@
 import CharacterCard from "@/components/game-mechanics/CharacterCard";
 import PageContainer from "@/components/layout/PageContainer";
+import PageHeader from "@/components/shared/PageHeader";
 import clericCharacterImage from "@/assets/images/characters/cleric_character.png";
 import fighterCharacterImage from "@/assets/images/characters/fighter_character.png";
 import mageCharacterImage from "@/assets/images/characters/mage_character.png"; 
@@ -23,7 +24,8 @@ const characters = [
   {
     name: "Fighter",
     role: "Tank",
-    description: "High defense and health, excels in close combat.",
+    description: "A seasoned warrior forged in the crucible of battle. With unwavering resolve and immense strength, the Fighter excels at absorbing punishment and protecting their team. Their superior defense and pool of health make them an ideal front-line combatant, drawing enemy fire while allies coordinate effective strikes. Masters of heavy weaponry and shield techniques, Fighters can turn the tide of battle through overwhelming determination and tactical positioning.",
+
     image: fighterCharacterImage,
     abilities: [
       {
@@ -60,7 +62,8 @@ const characters = [
   {
     name: "Mage",
     role: "DPS",
-    description: "Uses powerful spells to deal damage from a distance.",
+    description: "A scholar of the arcane arts, the Mage harnesses primal magical forces to unleash devastation upon their foes. From the safety of the back lines, they conjure spells of immense destructive power, controlling the battlefield through elemental magic and area-of-effect attacks. Their mastery over frost, flame, and pure magical energy makes them a force to be reckoned with. Though fragile in comparison to warriors, their ability to deal massive damage from afar makes them invaluable to any team.",
+
     image: mageCharacterImage,
     abilities: [
       { title: "Frost Spear",
@@ -89,7 +92,8 @@ const characters = [
   {
     name: "Cleric",
     role: "Support",
-    description: "Restores health and provides buffs to allies.",
+    description: "A beacon of hope on the battlefield, the Cleric draws upon divine power to heal and protect their companions. With their restorative magics and supportive abilities, Clerics ensure the team survives even the most grueling encounters. They can mend wounds, cleanse debuffs, and even deal damage while supporting allies. Their presence is often the difference between victory and defeat, as they maintain team morale and keep everyone standing when hope seems lost.",
+
     image: clericCharacterImage,
     abilities: [
       { title: "Debuff",
@@ -118,7 +122,8 @@ const characters = [
   {
     name: "Ranger",
     role: "DPS",
-    description: "Skilled with bows and traps, effective at mid-range combat.",
+    description: "A child of the wilderness, the Ranger commands nature itself as a weapon. With bow in hand and instincts honed by years in the wild, they strike with precision from mid-range, delivering consistent damage while maintaining distance from danger. Rangers can set traps, summon natural spirits, and rain arrows upon enemies with devastating accuracy. Their versatility and connection to nature make them adaptable hunters capable of handling any tactical situation with cunning and grace.",
+
     image: rangerCharacterImage,
     abilities: [
       { title: "Magic arrow", 
@@ -150,10 +155,7 @@ export default function GameMechanicsPage() {
   return (
     // TODO: Add functionality to fetch and create characters and abilities from backend instead of hardcoding them .
     <PageContainer>
-    <div className="flex items-center justify-center gap-3 mb-6">
-          <h2 className="text-3xl text-indigo-500 font-semibold text-center">Game Mechanics</h2>
-        </div>
-        
+    <PageHeader title="Game Mechanics" />
         <p className="text-center text-indigo-300 mb-8">
           Learn about the core mechanics including combat systems, resource management and details about the characters&apos; and bosses&apos; abilities and tactics.
         </p>
@@ -168,7 +170,7 @@ export default function GameMechanicsPage() {
             description={character.description}
             abilities={character.abilities}
           />
-          {index < characters.length - 1 && <Separator />}
+          {/* {index < characters.length - 1 && <Separator />} */}
             </div>
         ))
         }

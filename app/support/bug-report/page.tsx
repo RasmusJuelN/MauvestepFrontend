@@ -3,11 +3,13 @@
 import { useState } from 'react'
 import PageContainer from "@/components/layout/PageContainer"
 import Breadcrumb from "@/components/shared/Breadcrumb"
+import PageHeader from "@/components/shared/PageHeader"
 import Button from '@/components/shared/Button'
 import { BiChevronDown, BiInfoCircle } from 'react-icons/bi'
 import { BugReportService } from '@/lib/services/bugReportService'
 import { BugReportSeverity } from '@/lib/DTOs/bugReport'
 import { getErrorMessage } from '@/lib/utilities/errorhandling/errorHandler'
+import Separator from '@/components/shared/Separator'
 
 const categoryOptions = [
   { value: "general", label: 'General' },
@@ -86,10 +88,7 @@ export default function BugReportPage() {
           { label: 'Bug Report' }
         ]} />
         
-        <div className="flex items-center justify-center gap-3 mb-6">
-          <h2 className="text-3xl text-indigo-500 font-semibold text-center">Report a Bug</h2>
-        </div>
-        
+        <PageHeader title="Report a Bug" />
         <div className="bg-indigo-900/20 border border-indigo-700/30 rounded-lg p-4 mb-6 flex gap-3 justify-center ">
           <BiInfoCircle size={28} className="text-indigo-400 my-auto" />
           <p className="text-sm text-indigo-300">

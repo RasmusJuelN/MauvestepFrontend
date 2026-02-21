@@ -13,6 +13,7 @@ import { UpdateUserDto } from '@/lib/DTOs/user';
 import { useAuth } from '@/lib/hooks/authContext';
 import { getErrorMessage } from '@/lib/utilities/errorhandling/errorHandler';
 import defaultProfilePic from '@/assets/images/profile-pic.png';
+import PageHeader from '@/components/shared/PageHeader';
 
 
 export default function ProfilePage() {
@@ -102,10 +103,7 @@ export default function ProfilePage() {
     <PageContainer>
       <div >
 
-        <div className="mb-8">
-          <h1 className="text-4xl font-bold text-indigo-100 mb-2">Profile</h1>
-          <div className="w-full h-1 bg-gradient-to-r from-indigo-500 to-purple-500"></div>
-        </div>
+        <PageHeader title="Profile" />
 
 
         <div className="flex flex-col gap-8">

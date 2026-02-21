@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { validateRegistrationForm, ValidationErrors } from "@/lib/utilities/errorhandling/validation";
 import PageContainer from "@/components/layout/PageContainer";
+import PageHeader from "@/components/shared/PageHeader";
 import Input from "@/components/shared/Input";
 import Button from "@/components/shared/Button";
 import { AuthService } from "@/lib/services/authService";
@@ -94,11 +95,8 @@ export default function RegisterPage() {
   return (
     <PageContainer>
       <div className="space-y-6 lg-custom:w-5/6 mx-auto w-full">
-        {/* Header */}
-        <div className="text-center space-y-2 px-2">
-          <h2 className="text-3xl font-bold text-indigo-500">Create Account</h2>
-          <p className="text-indigo-200">Join the Mauvestep community</p>
-        </div>
+        <PageHeader title="Create Account" />
+        <p className="text-center text-indigo-200 mb-6">Join the Mauvestep community</p>
         {successMessage && (
           <div className="bg-green-900 bg-opacity-50 border-2 border-green-500 text-green-200 px-4 py-3 rounded">
             {successMessage}

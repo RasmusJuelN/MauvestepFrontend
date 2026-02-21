@@ -24,7 +24,7 @@ export default function Button({
   return (
     <button
       disabled={disabled || loading}
-      className={`px-4 py-2 rounded text-sm font-bold transition cursor-pointer text-center ${
+      className={`px-4 py-2 rounded text-sm font-bold transition cursor-pointer text-center text-white ${
         fullWidth ? 'w-full' : 'w-fit'
       } ${variantStyles[variant]} disabled:opacity-50 ${className}`}
       {...props}

@@ -1,6 +1,7 @@
 import PageContainer from '@/components/layout/PageContainer'
 import SupportCard from '@/components/support/SupportCard'
 import Breadcrumb from '@/components/shared/Breadcrumb'
+import PageHeader from '@/components/shared/PageHeader'
 import { BiBug, BiQuestionMark, BiEnvelope, BiBookOpen, BiMessageDetail } from 'react-icons/bi'
 import Link from 'next/link'
 
@@ -39,7 +40,7 @@ export default function SupportPage() {
           { label: 'Support' }
         ]} />
         
-        <h2 className="text-3xl text-indigo-500 font-semibold text-center mb-6">Support</h2>
+        <PageHeader title="Support" />
         
         <p className="text-center text-indigo-300 mb-8">
           How can we help you today? Choose a category below to get started.

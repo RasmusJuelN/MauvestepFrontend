@@ -1,6 +1,7 @@
 "use client";
 
 import PageContainer from "@/components/layout/PageContainer";
+import PageHeader from "@/components/shared/PageHeader";
 import { BiCrown } from 'react-icons/bi';
 import { HighscoreService } from "@/lib/services/highscoreService";
 import { HighscoreDto } from "@/lib/types";
@@ -38,9 +39,7 @@ export default function HighscorePage() {
 
   return (
     <PageContainer>
-      <div className="flex items-center justify-center gap-3 mb-6">
-        <h2 className="text-xl lg-custom:text-3xl text-indigo-500 font-semibold text-center">Highscore Leaderboard</h2>
-      </div>
+      <PageHeader title="Highscore Leaderboard" />
 
       <div className="bg-indigo-900/20 border-2 border-indigo-900/80 rounded-lg px-4 lg-custom:px-6 max-w-6xl mx-auto pb-4">
         <div className="grid grid-cols-3 lg-custom:grid-cols-4 gap-2 lg-custom:gap-4 px-4 py-3 border-b-2 border-indigo-700/50 text-indigo-400 font-semibold text-xs lg-custom:text-base">

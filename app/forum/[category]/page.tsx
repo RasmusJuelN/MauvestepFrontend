@@ -6,6 +6,7 @@ import ThreadCard from '../../../components/forum/ThreadCard'
 import CreateThreadModal from '@/components/forum/CreateThreadModal'
 import Link from 'next/link'
 import Breadcrumb from '@/components/shared/Breadcrumb'
+import PageHeader from '@/components/shared/PageHeader'
 import { ForumCategoryService } from '@/lib/services/forumCategoryService'
 
 import { ForumThread, ForumCategory } from '@/lib/types'
@@ -68,9 +69,7 @@ export default function CategoryPage({ params }: Props) {
         ]} />
         
         <div className="relative">
-          <h2 className="text-3xl text-indigo-500 font-semibold text-center capitalize">
-            {categoryData?.name || category}
-          </h2>
+          <PageHeader title={categoryData?.name || category} />
           {user && (
             <Button
               onClick={() => setShowCreateThreadModal(true)}

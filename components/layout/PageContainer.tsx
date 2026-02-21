@@ -39,7 +39,7 @@ export default function PageContainer({ children }: { children: React.ReactNode 
           }}
         />
         
-        <main className="flex-1 relative z-0">
+        <main className="flex-1 relative z-1">
           <div
             className="absolute inset-0 "
             style={{

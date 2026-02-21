@@ -8,6 +8,8 @@ import Breadcrumb from "@/components/shared/Breadcrumb"
 import { BiChevronDown, BiChevronUp } from 'react-icons/bi'
 import FaqCard from '@/components/support/faq/FaqCard'
 import { getErrorMessage } from '@/lib/utilities/errorhandling/errorHandler'
+import Separator from '@/components/shared/Separator'
+import PageHeader from '@/components/shared/PageHeader'
 
 export default function FAQPage() {
   const [openId, setOpenId] = useState<string | null>(null)
@@ -43,9 +45,7 @@ export default function FAQPage() {
           { label: 'FAQ' }
         ]} />
         
-        <div className="flex items-center justify-center gap-3 mb-6">
-          <h2 className="text-3xl text-indigo-500 font-semibold text-center">Frequently Asked Questions</h2>
-        </div>
+        <PageHeader title="Frequently Asked Questions" />
         
         <p className="text-center text-indigo-300 mb-8">
           Find quick answers to common questions about the forum and game.

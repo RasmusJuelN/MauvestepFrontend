@@ -5,6 +5,7 @@ import { NewsArticleService } from "@/lib/services/NewsArticleService";
 import NewsArticleCard from "../news/NewsArticleCard";
 import Separator from "../shared/Separator";
 import { getErrorMessage } from "@/lib/utilities/errorhandling/errorHandler";
+import PageHeader from "../shared/PageHeader";
 
 export default function NewsContainer() {
   const [news, setNews] = useState<NewsArticle[]>([]);
@@ -29,56 +30,37 @@ export default function NewsContainer() {
     fetchNews();
   }, []);
 
-  if (loading) {
-    return (
-      <div className="px-2 space-y-10">
-        <h2 className="text-3xl font-bold text-center text-indigo-500">
-          What&apos;s new?
-        </h2>
-        <p className="text-center text-gray-400">Loading news...</p>
-      </div>
-    );
-  }
-
-  if (error) {
-    return (
-      <div className="px-2 space-y-10">
-        <h2 className="text-3xl font-bold text-center text-indigo-500">
-          What&apos;s new?
-        </h2>
-        <p className="text-center text-red-400">Error: {error}</p>
-      </div>
-    );
-  }
-
-  if (news.length === 0) {
-    return (
-      <div className="px-2 space-y-10">
-        <h2 className="text-3xl font-bold text-center text-indigo-500">
-          What&apos;s new?
-        </h2>
-        <p className="text-center text-gray-400">No news articles available.</p>
-      </div>
-    );
-  }
-
   return (
-    <div className="px-2 space-y-10 ">
-      <h2 className="text-3xl font-bold text-center text-indigo-500 ">
-        What&apos;s new?
-      </h2>
-      {news.map((article) => (
-        <div key={article.id}>
-          <NewsArticleCard
-            title={article.title}
-            createdAt={article.createdAt}
-            content={article.content}
-            imageUrl={article.imageUrl}
-            username={article.username}
-          />
+    <div className="px-2 space-y-10">
+      <PageHeader title="What's new?" />
+      
+      {loading && (
+        <p className="text-center text-gray-400">Loading news...</p>
+      )}
 
+      {error && (
+        <p className="text-center text-red-400">Error: {error}</p>
+      )}
+
+      {!loading && !error && news.length === 0 && (
+        <p className="text-center text-gray-400">No news articles available.</p>
+      )}
+
+      {!loading && !error && news.length > 0 && (
+        <div>
+          {news.map((article) => (
+            <div key={article.id}>
+              <NewsArticleCard
+                title={article.title}
+                createdAt={article.createdAt}
+                content={article.content}
+                imageUrl={article.imageUrl}
+                username={article.username}
+              />
+            </div>
+          ))}
         </div>
-      ))}
+      )}
     </div>
   );
 }

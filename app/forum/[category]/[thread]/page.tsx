@@ -2,6 +2,7 @@
 
 import { use, useState, useEffect } from 'react'
 import Breadcrumb from '@/components/shared/Breadcrumb'
+import PageHeader from '@/components/shared/PageHeader'
 import PageContainer from '../../../../components/layout/PageContainer'
 
 import ThreadComment from '../../../../components/forum/ThreadComment'
@@ -163,9 +164,7 @@ export default function ThreadPage({ params }: Props) {
         ]} />
         
         <div className="relative">
-          <h2 className="text-3xl text-indigo-500 font-semibold text-center mb-2 pb-2">
-            {threadData?.title || 'Loading...'}
-          </h2>
+          <PageHeader title={threadData?.title || 'Loading...'} />
           {user && threadData && (
             <Button
               onClick={() => setShowCreatePostModal(true)}
@@ -191,7 +190,7 @@ export default function ThreadPage({ params }: Props) {
 
         <div>
           {posts.map((post) => (
-            <div key={post.id} className="mt-2 py-2 px-4 border-1 border-indigo-700/70 bg-indigo-900/10 rounded-lg mb-4">
+            <div key={post.id} className="mt-2 p-4 border-1 border-indigo-700/70 bg-indigo-900/10 rounded-lg mb-4">
               <ThreadPost
                 postId={post.id}
                 author={post.username}

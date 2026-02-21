@@ -26,10 +26,6 @@ export default function CharacterCard({ name, role, image, description, abilitie
                 document.removeEventListener("mousedown", handleClickOutside);
             };
         }, []);
-
-        useEffect(() => {
-  console.log('openAbility changed to:', openAbility);
-}, [openAbility]);
   
     return (
     <div>
@@ -56,39 +52,53 @@ export default function CharacterCard({ name, role, image, description, abilitie
         </div>
       )}
 
-      <div className="p-6 hover:border-indigo-600/50 transition-all duration-200 ">
-        <div className="mb-4 flex flex-row items-center">
-          <Image src={image} alt={name} width={100} />
-          <div className="flex flex-col ml-4">
-            <h3 className="text-xl text-indigo-400 font-semibold">{name}</h3>
-            <p className="muted mt-1 text-indigo-100">{role}</p>
-            <p className="mt-2 text-indigo-200">{description}</p>
+      <div className="p-8 border-2 border-indigo-600/80 rounded-xl bg-gradient-to-br from-indigo-950/10 to-indigo-900/20 hover:from-indigo-900/20 hover:to-indigo-800/20 transition-all duration-1300 hover:border-indigo-500/60 hover:shadow-lg hover:shadow-indigo-600/20">
+        {/* Character Header */}
+        <div className="mb-6 pb-6 border-b border-indigo-600/30">
+          <div className="flex flex-col items-center gap-6">
+            <div className="flex-shrink-0">
+              <div className="p-2 bg-indigo-900/50 rounded-lg border border-indigo-600/40">
+                <Image src={image} alt={name} width={120} height={120} quality={100} unoptimized style={{ imageRendering: 'pixelated' }} />
+              </div>
+            </div>
+            <div className="flex-1 text-center">
+              <h3 className="text-2xl font-bold text-indigo-300 mb-1" style={{ fontFamily: '"Press Start 2P", "Courier New", monospace', letterSpacing: '0.05em' }}>
+                {name}
+              </h3>
+              <p className="text-sm uppercase tracking-widest text-indigo-400 font-semibold mb-3">{role}</p>
+              <p className="text-indigo-200 text-sm leading-relaxed">{description}</p>
+            </div>
           </div>
         </div>
 
+        {/* Abilities Section */}
         <div>
-          <div>
-            <h4 className="text-lg text-indigo-300 font-semibold mt-4 mb-4 text-center ">
-              Abilities
-            </h4>
-
-            <div className="grid grid-cols-3 gap-4">
-              {abilities.map((ability, index) => (
-                <div 
-                  key={ability.title} 
-                  className="flex flex-col items-center cursor-pointer hover:scale-110 transition-transform" 
-                  onClick={() => setOpenAbility(index)}
-                >
+          <h4 className="text-lg font-bold text-indigo-300 mb-4 uppercase tracking-wider text-center">
+            Abilities
+          </h4>
+          <div className="grid grid-cols-3 gap-4">
+            {abilities.map((ability, index) => (
+              <div 
+                key={ability.title} 
+                className="group flex flex-col items-center cursor-pointer hover:scale-105 transition-transform duration-200"
+                onClick={() => setOpenAbility(index)}
+              >
+                <div className="mb-2 p-3 bg-indigo-900/40 rounded-lg border border-indigo-600/30 group-hover:border-indigo-500/60 group-hover:bg-indigo-900/60 transition-all">
                   <Image
                     src={ability.image}
                     alt={ability.title}
                     width={64}
                     height={64}
+                    quality={100}
+                    unoptimized
+                    style={{ imageRendering: 'pixelated' }}
                   />
-                  <p className="mt-2 text-indigo-200">{ability.title}</p>
                 </div>
-              ))}
-            </div>
+                <p className="text-indigo-300 font-semibold text-center text-sm group-hover:text-indigo-200 transition-colors">
+                  {ability.title}
+                </p>
+              </div>
+            ))}
           </div>
         </div>
       </div>

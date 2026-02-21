@@ -6,6 +6,7 @@ import { getErrorMessage } from '@/lib/utilities/errorhandling/errorHandler';imp
 import Breadcrumb from "@/components/shared/Breadcrumb"
 import Button from '@/components/shared/Button'
 import { BiStar, BiSolidStar, BiChevronDown } from 'react-icons/bi'
+import PageHeader from '@/components/shared/PageHeader';
 
 const categoryOptions = [
   { value: 'general', label: 'General Feedback' },
@@ -83,9 +84,7 @@ export default function FeedbackPage() {
           { label: 'Feedback' }
         ]} />
         
-        <div className="flex items-center justify-center gap-3 mb-6">
-          <h2 className="text-3xl text-indigo-500 font-semibold text-center">Share Your Feedback</h2>
-        </div>
+        <PageHeader title="Share Your Feedback" />
         
         <p className="text-center text-indigo-300 mb-8">
           Your feedback helps us improve. Tell us what you think!
