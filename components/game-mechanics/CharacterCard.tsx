@@ -52,7 +52,7 @@ export default function CharacterCard({ name, role, image, description, abilitie
         </div>
       )}
 
-      <div className="p-8 border-2 border-indigo-600/80 rounded-xl bg-gradient-to-br from-indigo-950/10 to-indigo-900/20 hover:from-indigo-900/20 hover:to-indigo-800/20 transition-all duration-1300 hover:border-indigo-500/60 hover:shadow-lg hover:shadow-indigo-600/20">
+      <div className="p-6 border-2 border-indigo-900/80 rounded-lg bg-indigo-900/10 hover:bg-indigo-900/40 hover:border-indigo-600/50 transition-all duration-200 cursor-pointer">
         {/* Character Header */}
         <div className="mb-6 pb-6 border-b border-indigo-600/30">
           <div className="flex flex-col items-center gap-6">

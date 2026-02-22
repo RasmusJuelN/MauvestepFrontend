@@ -190,7 +190,7 @@ export default function ThreadPage({ params }: Props) {
 
         <div>
           {posts.map((post) => (
-            <div key={post.id} className="mt-2 p-4 border-1 border-indigo-700/70 bg-indigo-900/10 rounded-lg mb-4">
+            <div key={post.id} className="mt-2  border-1 border-indigo-700/70 bg-indigo-900/10 rounded-lg mb-4">
               <ThreadPost
                 postId={post.id}
                 author={post.username}
@@ -209,7 +209,7 @@ export default function ThreadPage({ params }: Props) {
               />
 
               {post.comments && post.comments.length > 0 && (
-                <div className="my-4">
+                <div className="m-4">
                   <button
                     onClick={() => showCommentsOnPost(post.id)}
                     className="text-sm font-semibold text-indigo-400 hover:text-indigo-300 transition flex items-center gap-1 cursor-pointer"
@@ -224,7 +224,7 @@ export default function ThreadPage({ params }: Props) {
 
               {user && commentingOnPost === post.id && (
                 <div>
-                  <form onSubmit={(e) => handleCreateComment(e, post.id)} className="space-y-3">
+                  <form onSubmit={(e) => handleCreateComment(e, post.id)} className="space-y-3 px-4">
                     <textarea
                       value={commentData.content}
                       onChange={(e) => setCommentData({ ...commentData, content: e.target.value })}
@@ -233,7 +233,7 @@ export default function ThreadPage({ params }: Props) {
                       placeholder="Write your comment..."
                       required
                     />
-                    <div className="flex gap-2">
+                    <div className="flex gap-2 pb-4">
                       <Button
                         type="button"
                         variant="cancel"

@@ -12,16 +12,16 @@ export function getErrorMessage(error: unknown, defaultMessage: string = 'An err
       }
     }
 
-    // Handle 401 Unauthorized for actions that require authentication
-    if (axiosError.response?.status === 401) {
-      return 'You must be logged in to perform this action.'
-    }
-
     // Handle server error messages
     if (axiosError.response?.data?.message) {
       return axiosError.response.data.message
     }
-  }
+ 
+    // Handle 401 Unauthorized for actions that require authentication
+    if (axiosError.response?.status === 401) {
+      return 'You must be logged in to perform this action.'
+    }
+ }
 
   // Check if it's a standard Error object
   if (error instanceof Error) {

@@ -90,7 +90,7 @@ export default function ThreadComment({ commentId, comment, author, date, likeCo
   }
 
   return (
-    <div className=" border-l-2 border-indigo-500 bg-indigo-950/20 px-3 py-3 rounded-r-sm hover:bg-indigo-900/20 hover:border-indigo-400 transition-all">
+    <div className=" border-l-2 border-indigo-500 bg-indigo-950/40 px-6 py-4 rounded-r-lg hover:bg-indigo-900/20 hover:border-indigo-400 transition-all">
 
       <div className="flex items-center justify-between mb-2">
         <div className="flex items-center gap-2">

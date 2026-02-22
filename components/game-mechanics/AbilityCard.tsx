@@ -1,5 +1,6 @@
 import { StaticImageData } from "next/image";
 import Image from "next/image";
+
 import React from "react";
 
 export default function AbilityCard({title, description, damage, apCost, apGain, hpGain, image} : 
@@ -25,7 +26,7 @@ export default function AbilityCard({title, description, damage, apCost, apGain,
       <div className="flex flex-col gap-6">
         {/* Ability Image */}
         <div className="flex justify-center">
-          <div className="p-4 bg-indigo-900/50 rounded-lg border border-indigo-600/40">
+          <div className="p-4 bg-indigo-900/50 rounded-lg border border-indigo-400/80">
             <Image src={image} alt={title} width={120} height={120} quality={100} unoptimized style={{ imageRendering: 'pixelated' }} />
           </div>
         </div>
@@ -33,25 +34,27 @@ export default function AbilityCard({title, description, damage, apCost, apGain,
         {/* Stats Grid */}
         <div className="grid grid-cols-2 gap-4">
           <StatItem label="Damage" value={damage} color="text-red-400" />
-          <StatItem label="AP Cost" value={apCost} color="text-orange-400" />
-          <StatItem label="AP Gain" value={apGain} color="text-green-400" />
-          <StatItem label="HP Gain" value={hpGain} color="text-blue-400" />
+          <StatItem label="AP Cost" value={apCost} color="text-blue-500" />
+          <StatItem label="AP Gain" value={apGain} color="text-orange-300" />
+          <StatItem label="HP Gain" value={hpGain} color="text-green-400" />
         </div>
 
         {/* Description */}
-        <div className="bg-indigo-900/30 rounded-lg p-4 border border-indigo-600/30">
-          <p className="text-indigo-200 text-sm leading-relaxed">{description}</p>
+        <div className="bg-indigo-900/30 rounded-lg p-4 border border-indigo-400/80">
+          <p className="text-indigo-200 text-sm leading-relaxed text-center">{description}</p>
         </div>
       </div>
     </div>
+
   );
 }
 
 function StatItem({ label, value, color }: { label: string; value: number; color: string }) {
   return (
-    <div className="bg-indigo-900/40 rounded-lg p-3 border border-indigo-600/30 text-center">
+    <div className="bg-indigo-900/40 rounded-lg p-3 border border-indigo-400/80 text-center">
       <p className="text-xs text-indigo-400 uppercase tracking-wider mb-1">{label}</p>
       <p className={`text-lg font-bold ${color}`}>{value}</p>
     </div>
+    
   );
 }

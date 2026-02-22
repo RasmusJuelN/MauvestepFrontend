@@ -93,7 +93,7 @@ export default function ThreadPost({
   }
 
   return (
-    <div className="border-b border-indigo-700/30 p-2 pb-4 last:border-b-0 ">
+    <div className="border-b border-indigo-700/90  last:border-b-0 bg-indigo-800/50 p-4 rounded-t-lg">
 
       <div className="flex gap-3">
 
@@ -183,7 +183,7 @@ export default function ThreadPost({
             </div>
           </div>
 
-          <p className="text-indigo-100 mb-3 leading-relaxed">{content}</p>
+          <p className="text-indigo-100 mb-4 leading-relaxed">{content}</p>
 
           <div className="flex items-center gap-5 text-sm">
             <button
