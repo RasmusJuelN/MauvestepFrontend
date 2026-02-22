@@ -11,7 +11,7 @@ export default function AdminCard({ title, description, onClick, children }: Adm
   return (
     <div 
       onClick={onClick}
-      className="bg-indigo-900/30 p-6 rounded border border-indigo-700 hover:border-indigo-500 hover:bg-indigo-900/50 transition cursor-pointer"
+      className="bg-gradient-to-br from-indigo-900/40 to-purple-900/40 border border-indigo-600/40 rounded-lg p-6 hover:border-indigo-500/80 hover:bg-indigo-900/60 hover:shadow-lg hover:shadow-indigo-600/30 transition-all duration-300 cursor-pointer"
     >
       <h2 className="text-2xl font-bold mb-2 mt-2">{title}</h2>
       <p className="text-sm text-indigo-300 mb-4">{description}</p>

@@ -10,7 +10,7 @@ export default function FaqCard ({id, category, question, answer, isOpen, onTogg
         <div className="space-y-3">
           <div
             key={id}
-            className="border-2 border-indigo-900/80 rounded-lg bg-indigo-900/10 overflow-hidden hover:border-indigo-600/50 hover:bg-indigo-900/40 transition-all duration-200 cursor-pointer"
+            className="bg-gradient-to-br from-indigo-900/40 to-purple-900/40 border border-indigo-600/40 rounded-lg overflow-hidden hover:border-indigo-500/80 hover:bg-indigo-900/60 hover:shadow-lg hover:shadow-indigo-600/30 transition-all duration-300 cursor-pointer"
           >
             <button
               onClick={() => setOpenId(openId === id ? null : id)}

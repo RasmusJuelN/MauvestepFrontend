@@ -46,7 +46,7 @@ export default function SupportPage() {
           How can we help you today? Choose a category below to get started.
         </p>
         
-        <div className="space-y-2">
+        <div className="space-y-4">
           {supportOptions.map(option => (
             <Link
               key={option.id}

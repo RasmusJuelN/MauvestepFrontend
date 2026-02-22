@@ -9,8 +9,7 @@ interface Props {
 
 export default function SupportCard({ icon: Icon, title, description }: Props) {
   return (
-
-      <div className="p-6 border-2 border-indigo-900/80 rounded-lg bg-indigo-900/10 hover:bg-indigo-900/40 hover:border-indigo-600/50 transition-all duration-200 cursor-pointer">
+      <div className="bg-gradient-to-br from-indigo-900/40 to-purple-900/40 border border-indigo-600/40 rounded-lg p-6 hover:border-indigo-500/80 hover:bg-indigo-900/60 hover:shadow-lg hover:shadow-indigo-600/30 transition-all duration-300 cursor-pointer">
         <div className="flex items-center gap-4">
           <div className="p-3 bg-indigo-800/30 rounded-lg">
             <Icon size={24} className="text-indigo-300" />
@@ -21,6 +20,5 @@ export default function SupportCard({ icon: Icon, title, description }: Props) {
           </div>
         </div>
       </div>
-
   )
 }

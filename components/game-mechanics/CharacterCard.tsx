@@ -28,7 +28,7 @@ export default function CharacterCard({ name, role, image, description, abilitie
         }, []);
   
     return (
-    <div>
+    <div >
       {/* Modal Overlay */}
       {openAbility !== null && (
         <div 
@@ -52,7 +52,7 @@ export default function CharacterCard({ name, role, image, description, abilitie
         </div>
       )}
 
-      <div className="p-6 border-2 border-indigo-900/80 rounded-lg bg-indigo-900/10 hover:bg-indigo-900/40 hover:border-indigo-600/50 transition-all duration-200 cursor-pointer">
+      <div className="mb-4 bg-gradient-to-br from-indigo-900/40 to-purple-900/40 border border-indigo-600/40 rounded-lg p-6  transition-all duration-300">
         {/* Character Header */}
         <div className="mb-6 pb-6 border-b border-indigo-600/30">
           <div className="flex flex-col items-center gap-6">

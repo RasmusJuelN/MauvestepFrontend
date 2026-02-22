@@ -16,7 +16,6 @@ export const apiClient = axios.create({
  // Retrieves token from localStorage or sessionStorage and send it with every request
 apiClient.interceptors.request.use(
   (config) => {
-    // Check localStorage first (for "Remember Me" sessions)
     let token = localStorage.getItem("token");
     
     // If not in localStorage, check sessionStorage (for non-remembered sessions)
