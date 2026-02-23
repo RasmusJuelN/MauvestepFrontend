@@ -229,7 +229,7 @@ export default function ThreadPage({ params }: Props) {
                       value={commentData.content}
                       onChange={(e) => setCommentData({ ...commentData, content: e.target.value })}
                       rows={3}
-                      className="w-full px-3 py-2 bg-indigo-900/30 border border-indigo-700 rounded-lg text-indigo-100 focus:outline-none focus:ring-2 focus:ring-indigo-500 text-sm"
+                      className="mt-4 w-full px-3 py-2 bg-indigo-900/30 border border-indigo-700 rounded-lg text-indigo-100 focus:outline-none focus:ring-2 focus:ring-indigo-500 text-sm"
                       placeholder="Write your comment..."
                       required
                     />

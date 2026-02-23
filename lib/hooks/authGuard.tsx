@@ -10,26 +10,15 @@ export function useAdminGuard() {
   const [isAuthorized, setIsAuthorized] = useState(false);
 
   React.useEffect(() => { 
-    // console.log("isLoading:" "user:", user, "token:", !!token);
-
     if (isLoading) {
       return;
     }
 
     // User is not authenticated, redirect to home
     if (!user || !token || user.role !== "Admin") {
-    // console.log("No user or token found");
       router.push("/");
       return;
     }
-
-    // console.log("User found:", user.username, "Role:", user.role, "Type:", typeof user.role);
-
-    // User is not admin, redirect to home
-    // if (user.role !== "Admin") {
-    //   router.push("/");
-    //   return;
-    // }
 
     // User is admin
     setIsAuthorized(true);
