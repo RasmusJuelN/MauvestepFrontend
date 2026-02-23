@@ -41,7 +41,7 @@ export default function HighscorePage() {
     <PageContainer>
       <PageHeader title="Highscore Leaderboard" />
 
-      <div className="bg-indigo-900/20 border-2 border-indigo-900/80 rounded-lg px-4 lg-custom:px-6 max-w-6xl mx-auto pb-4">
+      <div className="bg-indigo-900/20 border-2 border-indigo-900/80 rounded-lg px-4 lg-custom:px-6 max-w-6xl mx-auto pb-4 mt-4">
         <div className="grid grid-cols-3 lg-custom:grid-cols-4 gap-2 lg-custom:gap-4 px-4 py-3 border-b-2 border-indigo-700/50 text-indigo-400 font-semibold text-xs lg-custom:text-base">
           <span className="text-left">Player</span>
           <span className="text-center">Boss</span>
