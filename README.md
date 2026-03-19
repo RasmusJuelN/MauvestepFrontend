@@ -1,36 +1,66 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Mauve Step — Community Frontend
+
+The official community web application for **Mauve Step**, a rhythm-based dungeon game. This platform brings players together to share strategies, track leaderboards, browse game mechanics, and stay up to date with the latest news.
+
+## Features
+
+- **Forum** — Discuss strategies, share tips, and connect with other players by category.
+- **Leaderboard** — Browse and compare high scores from players around the world.
+- **Game Mechanics** — In-depth documentation on gameplay mechanics to help you master the dungeon.
+- **Support** — Submit bug reports, send feedback, browse the FAQ, or contact the team.
+- **User Profiles** — Manage your account and view your stats.
+- **News** — Stay updated with the latest announcements and patch notes.
+- **Admin Panel** — Tools for moderators to manage community content.
+
+## Tech Stack
+
+- [Next.js 16](https://nextjs.org) — React framework with App Router
+- [React 19](https://react.dev) — UI library
+- [TypeScript](https://www.typescriptlang.org) — Type-safe JavaScript
+- [Tailwind CSS v4](https://tailwindcss.com) — Utility-first styling
+- [Axios](https://axios-http.com) — HTTP client for API communication
+- [React Icons](https://react-icons.github.io/react-icons/) — Icon library
 
 ## Getting Started
 
-First, run the development server:
+Install dependencies:
+
+```bash
+npm install
+```
+
+Run the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Available Scripts
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+| Script | Description |
+|---|---|
+| `npm run dev` | Start the development server |
+| `npm run build` | Build the application for production |
+| `npm run start` | Start the production server |
+| `npm run lint` | Run ESLint |
 
-## Learn More
+## Project Structure
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```
+app/                  # Next.js App Router pages
+  forum/              # Forum pages (by category)
+  highscore/          # Leaderboard page
+  game-mechanics/     # Game mechanics documentation
+  support/            # Support pages (FAQ, bug report, feedback, contact)
+  profile/            # User profile page
+  register/           # Registration page
+  admin/              # Admin panel
+components/           # Reusable UI components
+  layout/             # Page layout components (Header, Footer, Sidebar, etc.)
+  forum/              # Forum-specific components
+  shared/             # Shared components used across pages
+lib/                  # Utilities, API clients, hooks, services, and types
+public/               # Static assets
+```
