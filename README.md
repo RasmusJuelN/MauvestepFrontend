@@ -1,6 +1,10 @@
 # Mauve Step — Community Frontend
 
-The official community web application for **Mauve Step**, a rhythm-based dungeon game. This platform brings players together to share strategies, track leaderboards, browse game mechanics, and stay up to date with the latest news.
+This repository contains the frontend for **Mauve Step**, created as part of my final apprenticeship project in the **Data Technician education programme with a specialization in programming**.
+
+The full project consists of three connected parts: this frontend application, a backend API hosted in a separate repository, and the **Mauve Step** game developed by my project partner. The frontend serves as the community platform for the game, where players can interact, access useful information, and stay updated on the latest developments.
+
+The application is designed to support the player community by providing features such as forums, leaderboards, game mechanics documentation, support pages, user profiles, and news. Its goal is to create a central hub around the game and improve the overall player experience outside of gameplay.
 
 ## Features
 
